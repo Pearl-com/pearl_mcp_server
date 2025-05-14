@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pearl-mcp-server"
+version = "0.1.0"
+description = "Pearl MCP Server Implementation"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Vitaliy Beketov" }
+]
+dependencies = [
+    "anyio>=4.2.0",
+    "click>=8.1.8",
+    "httpx>=0.26.0",
+    "mcp>=0.1.0",
+    "starlette>=0.36.0",
+    "uvicorn>=0.27.0",
+    "python-dotenv>=1.0.0",
+    "openai>=1.12.0",
+    "tenacity>=8.2.0",
+    "pydantic>=2.7.2",
+    "pydantic-settings>=2.1.0",
+    "typing-extensions>=4.12.0",
+    "sse-starlette>=2.0.0",
+    "httpx-sse>=0.4.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.1.0",
+    "isort>=5.13.0",
+    "mypy>=1.8.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.2.1"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[project.scripts]
+pearl-mcp-server = "src.pearl_mcp_server:main"
