@@ -99,6 +99,54 @@ The server provides the following tools:
    - Retrieve full conversation history
    - Parameter: `session_id`
 
+## Expert Categories
+
+Pearl's MCP server provides access to a wide range of expert categories. The appropriate expert category is automatically determined by Pearl's API based on the context of your query, ensuring you're connected with the most relevant expert for your needs.
+
+Here are the main categories of expertise available:
+
+- **Medical & Healthcare**
+  - General Medicine
+  - Dental Health
+  - Mental Health
+  - Nutrition & Diet
+  - Fitness & Exercise
+  - Veterinary Medicine
+
+- **Legal & Financial**
+  - Legal Advice
+  - Tax Consultation
+  - Financial Planning
+  - Business Law
+  - Employment Law
+  - Real Estate Law
+
+- **Technical & Professional**
+  - Software Development
+  - IT Support
+  - Computer Repair
+  - Electronics
+  - Mechanical Engineering
+  - Home Improvement
+
+- **Education & Career**
+  - Academic Tutoring
+  - Career Counseling
+  - Resume Writing
+  - Test Preparation
+  - College Admissions
+  - Professional Development
+
+- **Lifestyle & Personal**
+  - Relationship Advice
+  - Parenting
+  - Pet Care
+  - Personal Styling
+  - Interior Design
+  - Travel Planning
+
+Each expert category can be accessed through the `ask_expert` or `ask_pearl_expert` tools. You don't need to specify the category - simply describe your question or problem, and Pearl's AI will automatically route your request to the most appropriate expert type based on the context.
+
 ## Connecting with MCP Clients
 
 ### Local Connection (stdio transport)
