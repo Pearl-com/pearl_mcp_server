@@ -64,7 +64,7 @@ pearl-mcp-server --api-key your-api-key --transport sse --port 8000
 
 Pearl provides a hosted MCP server at:
 ```
-https://pearl-api-mcp-server.pearlapi.workers.dev/sse
+https://mcp.pearl.com/mcp
 ```
 
 This can be used directly with any MCP client without installing the Python application locally.
@@ -182,7 +182,7 @@ Some MCP clients don't support direct connection to remote MCP servers. For thes
             "command": "npx",
             "args": [
                 "mcp-remote",
-                "https://pearl-api-mcp-server.pearlapi.workers.dev/sse"
+                "https://mcp.pearl.com/sse"
             ]
         }
     }
@@ -199,7 +199,7 @@ Some MCP clients don't support direct connection to remote MCP servers. For thes
 4. Additional Options:
    - Force latest version: Add `@latest` to npx command
    ```json
-   "args": ["mcp-remote@latest", "https://pearl-api-mcp-server.pearlapi.workers.dev/sse"]
+   "args": ["mcp-remote@latest", "https://mcp.pearl.com/sse"]
    ```
    
 
@@ -208,7 +208,7 @@ Some MCP clients don't support direct connection to remote MCP servers. For thes
    - View logs:
      - Windows (PowerShell): `Get-Content "$env:APPDATA\Claude\Logs\mcp.log" -Wait -Tail 20`
      - macOS/Linux: `tail -n 20 -F ~/Library/Logs/Claude/mcp*.log`
-   - Test connection: `npx mcp-remote-client https://pearl-api-mcp-server.pearlapi.workers.dev/sse`
+   - Test connection: `npx mcp-remote-client https://mcp.pearl.com/sse`
 
 ### Custom Python Client
 
