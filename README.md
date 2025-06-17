@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/pearl-com-pearl-mcp-server-badge.png)](https://mseep.ai/app/pearl-com-pearl-mcp-server)
+
 # Pearl MCP Server
 
 A Model Context Protocol (MCP) server implementation that exposes Pearl's AI and Expert services through a standardized interface. This server allows MCP clients like Claude Desktop, Cursor, and other MCP-compatible applications to interact with [Pearl's advanced AI assistants and human experts](https://www.pearl.com/post/download-this-free-whitepaper-now-beyond-ai-how-pearl-s-mcp-server-bridges-your-ai-agents-with-re).
