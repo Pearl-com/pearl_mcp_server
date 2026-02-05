@@ -7,8 +7,7 @@ A Model Context Protocol (MCP) server implementation that exposes Pearl's AI and
 - Support for both stdio and SSE transports
 - Integration with Pearl API for AI and expert assistance
 - Session management for continuous conversations
-- Multiple interaction modes:
-  - AI-only mode for quick automated responses
+- Two interaction modes:
   - AI-Expert mode for AI-assisted human expert support
   - Expert mode for direct human expert assistance
 - Conversation history tracking
@@ -73,29 +72,21 @@ This can be used directly with any MCP client without installing the Python appl
 
 The server provides the following tools:
 
-1. `ask_pearl_ai`
-   - Quick AI-only responses without human review
-   - Best for general inquiries and non-critical situations
-   - Parameters:
-     - `question`: The user's query
-     - `chat_history` (optional): Previous conversation context
-     - `session_id` (optional): For continuing conversations
-
-2. `ask_pearl_expert`
+1. `ask_pearl_expert`
    - AI-assisted human expert support
    - Best for complex topics requiring expert verification
    - Parameters: Same as ask_pearl_ai
 
-3. `ask_expert`
+2. `ask_expert`
    - Direct human expert assistance
    - Best for complex or sensitive topics
    - Parameters: Same as ask_pearl_ai
 
-4. `get_conversation_status`
+3. `get_conversation_status`
    - Check the status of an active conversation
    - Parameter: `session_id`
 
-5. `get_conversation_history`
+4. `get_conversation_history`
    - Retrieve full conversation history
    - Parameter: `session_id`
 
@@ -229,9 +220,9 @@ async def main():
             tools = await session.list_tools()
             print(tools)
             
-            # Call Pearl AI
+            # Call Pearl API
             result = await session.call_tool(
-                "ask_pearl_ai", 
+                "ask_pearl_expert", 
                 {
                     "question": "What is MCP?",
                     "session_id": "optional-session-id"
